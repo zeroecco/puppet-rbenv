@@ -156,7 +156,6 @@ define rbenv::build (
       environment => ["RBENV_ROOT=${install_dir}"],
       require     => Exec["rbenv-install-${title}"],
       subscribe   => Exec["rbenv-ownit-${title}"],
-      refreshonly => true,
     }
   }
 
